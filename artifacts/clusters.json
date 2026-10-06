@@ -1,0 +1,331 @@
+{
+ "k": 16,
+ "campaigns": [
+  {
+   "campaign": 10,
+   "label": "wek, gotodate, promo",
+   "templates": 149,
+   "submissions": 854,
+   "honeypot_rate": 0.9775413711583925,
+   "main_script": "latin",
+   "first_year": 2020,
+   "last_year": 2025,
+   "top_terms": [
+    "wek",
+    "gotodate",
+    "promo",
+    "robot",
+    "financial",
+    "money"
+   ],
+   "example": "Salut, ech wollt Äre Präis wëssen. Make $1000 from $1 in a few minutes. Launch the financial robot now. https://wek.187sued.de/gotodate/promo"
+  },
+  {
+   "campaign": 5,
+   "label": "google, hello, cc",
+   "templates": 472,
+   "submissions": 660,
+   "honeypot_rate": 0.6132596685082873,
+   "main_script": "latin",
+   "first_year": 2020,
+   "last_year": 2025,
+   "top_terms": [
+    "google",
+    "hello",
+    "cc",
+    "etsy",
+    "ph",
+    "казино"
+   ],
+   "example": "<a href=https://pint77.blogspot.com/2023/10/stylish-and-modern-cat-furniture.html>Blogger. Google. Hexagon cat shelves, Cat condo, climbing wall, wall steps, tr"
+  },
+  {
+   "campaign": 1,
+   "label": "hi, website, backlinks",
+   "templates": 289,
+   "submissions": 579,
+   "honeypot_rate": 0.564625850340136,
+   "main_script": "latin",
+   "first_year": 2020,
+   "last_year": 2025,
+   "top_terms": [
+    "hi",
+    "website",
+    "backlinks",
+    "seo",
+    "whatsapp",
+    "product"
+   ],
+   "example": "Hi,    One of the less known websites where you can find not only a lot of Photography and Photoshop tutorials, but also many other related complete courses, at"
+  },
+  {
+   "campaign": 3,
+   "label": "на, для, по",
+   "templates": 438,
+   "submissions": 552,
+   "honeypot_rate": 0.5476190476190477,
+   "main_script": "cyrillic",
+   "first_year": 2020,
+   "last_year": 2025,
+   "top_terms": [
+    "на",
+    "для",
+    "по",
+    "не",
+    "это",
+    "что"
+   ],
+   "example": "Интернет-магазины стали неотъемлемой частью современной жизни, предлагая покупателям удобство и разнообразие ассортимента. Arbuz.kz выделяется среди них благода"
+  },
+  {
+   "campaign": 4,
+   "label": "business, best, new",
+   "templates": 389,
+   "submissions": 449,
+   "honeypot_rate": 0.6496815286624203,
+   "main_script": "latin",
+   "first_year": 2020,
+   "last_year": 2025,
+   "top_terms": [
+    "business",
+    "best",
+    "new",
+    "company",
+    "time",
+    "online"
+   ],
+   "example": "The advantages of using an Accounting company or accounting Firm for a lawyer and a genuine Real Estate Specialist    Law offices and properties masters come ac"
+  },
+  {
+   "campaign": -1,
+   "label": "short / no shared vocabulary",
+   "templates": 139,
+   "submissions": 446,
+   "honeypot_rate": 0.23737373737373738,
+   "main_script": "latin",
+   "first_year": 2020,
+   "last_year": 2025,
+   "top_terms": [],
+   "example": "<a href=http://zrenieblog.ru/>Detail</a>:  <a href=http://zrenieblog.ru/>http://zrenieblog.ru/</a>  http://zrenieblog.ru/ <a href=\"http://zrenieblog.ru/\">http:/"
+  },
+  {
+   "campaign": 7,
+   "label": "click, unsubscribe, just",
+   "templates": 302,
+   "submissions": 355,
+   "honeypot_rate": 0.6296296296296297,
+   "main_script": "latin",
+   "first_year": 2020,
+   "last_year": 2025,
+   "top_terms": [
+    "click",
+    "unsubscribe",
+    "just",
+    "ai",
+    "content",
+    "website"
+   ],
+   "example": "Hey,  Every business owner needs ultra fast loading websites to convert random website visitors to lifetime happy customers.  But, finding a suitable hosting te"
+  },
+  {
+   "campaign": 6,
+   "label": "online, casino, games",
+   "templates": 145,
+   "submissions": 195,
+   "honeypot_rate": 0.7419354838709677,
+   "main_script": "latin",
+   "first_year": 2021,
+   "last_year": 2025,
+   "top_terms": [
+    "online",
+    "casino",
+    "games",
+    "slots",
+    "experience",
+    "bonuses"
+   ],
+   "example": "we're revolutionizing the online gambling industry with our user-friendly platform and exciting games. https://eventlink.to/gambling  Welcome to web 3.0 online "
+  },
+  {
+   "campaign": 13,
+   "label": "seo, digital, ranks",
+   "templates": 107,
+   "submissions": 157,
+   "honeypot_rate": 0.6403508771929824,
+   "main_script": "latin",
+   "first_year": 2020,
+   "last_year": 2025,
+   "top_terms": [
+    "seo",
+    "digital",
+    "ranks",
+    "regards",
+    "whitehat",
+    "organically"
+   ],
+   "example": "Hi,  Worried about hidden SEO issues on your website? Let us help — completely free.  Run a 100% free SEO check and discover the exact problems holding your sit"
+  },
+  {
+   "campaign": 0,
+   "label": "cialis, viagra, prescription",
+   "templates": 78,
+   "submissions": 151,
+   "honeypot_rate": 0.5227272727272727,
+   "main_script": "latin",
+   "first_year": 2022,
+   "last_year": 2025,
+   "top_terms": [
+    "cialis",
+    "viagra",
+    "prescription",
+    "mg",
+    "monster",
+    "buy"
+   ],
+   "example": "Hallo, ek wou jou prys ken. <a href=\"https://cialis20mgtab.monster/\">buy cialis brand canada</a>"
+  },
+  {
+   "campaign": 8,
+   "label": "купить, москве, для",
+   "templates": 110,
+   "submissions": 111,
+   "honeypot_rate": 1.0,
+   "main_script": "cyrillic",
+   "first_year": 2021,
+   "last_year": 2025,
+   "top_terms": [
+    "купить",
+    "москве",
+    "для",
+    "сайт",
+    "на",
+    "meshki"
+   ],
+   "example": "Доброго!    Время учебы в универе или колледже, золотое время для гулянок и тусовок, но приходит время отчетных периодов и студенты начинают хвататься за голову"
+  },
+  {
+   "campaign": 12,
+   "label": "приворот, chimmed, tegs",
+   "templates": 101,
+   "submissions": 104,
+   "honeypot_rate": 0.6923076923076923,
+   "main_script": "cyrillic",
+   "first_year": 2021,
+   "last_year": 2025,
+   "top_terms": [
+    "приворот",
+    "chimmed",
+    "tegs",
+    "химмед",
+    "онлайн",
+    "на"
+   ],
+   "example": "<a href=https://ses-sanepidemstanciya.ru/laboratornye-analizy/voda/>анализ воды результаты </a>  Tegs: анализ воды реутов  https://ses-sanepidemstanciya.ru/labo"
+  },
+  {
+   "campaign": 2,
+   "label": "wallet, io, gitbook",
+   "templates": 85,
+   "submissions": 89,
+   "honeypot_rate": 0.5,
+   "main_script": "latin",
+   "first_year": 2021,
+   "last_year": 2025,
+   "top_terms": [
+    "wallet",
+    "io",
+    "gitbook",
+    "metamask",
+    "app",
+    "crypto"
+   ],
+   "example": "https://debankdefi.gitbook.io/debank-wallet/ what are oracles in crypto"
+  },
+  {
+   "campaign": 9,
+   "label": "xn, kr, tw",
+   "templates": 87,
+   "submissions": 87,
+   "honeypot_rate": 0.0,
+   "main_script": "other",
+   "first_year": 2021,
+   "last_year": 2024,
+   "top_terms": [
+    "xn",
+    "kr",
+    "tw",
+    "있다",
+    "있는",
+    "연말"
+   ],
+   "example": "새 차를 사려고 알아보니 자가용 보험료가 생각보다 비싸고 취등록세 등 추가로 투입하는 돈이 부담이 됐기 때문이다. 한00씨는 '보험료와 세금도 부담이 됐고 특별히 아직 운전이 미숙해 혹시 사고를 내면 보험료가 할증이 된다고 해 중고트럭를 선택했다'고 말했다.    [url=http://"
+  },
+  {
+   "campaign": 11,
+   "label": "porn, free, videos",
+   "templates": 84,
+   "submissions": 85,
+   "honeypot_rate": 0.5,
+   "main_script": "latin",
+   "first_year": 2023,
+   "last_year": 2024,
+   "top_terms": [
+    "porn",
+    "free",
+    "videos",
+    "sex",
+    "tube",
+    "galleries"
+   ],
+   "example": "Free amateur porn videos wild girls on homemade sex tapes http://android-sexy-back.of-body-medic.tiktokpornstar.com/?jessica-jada   free iphone porn movies feti"
+  },
+  {
+   "campaign": 15,
+   "label": "kraken, ссылка, darknet",
+   "templates": 79,
+   "submissions": 81,
+   "honeypot_rate": 1.0,
+   "main_script": "latin",
+   "first_year": 2022,
+   "last_year": 2022,
+   "top_terms": [
+    "kraken",
+    "ссылка",
+    "darknet",
+    "blacksprut",
+    "сайт",
+    "даркнет"
+   ],
+   "example": "[url=https://mega555nets14.com/]сайт мега ссылка в тор[/url] - mega darknet ссылка, ссылка на mega"
+  },
+  {
+   "campaign": 14,
+   "label": "news, post, interesting",
+   "templates": 68,
+   "submissions": 80,
+   "honeypot_rate": 0.36363636363636365,
+   "main_script": "latin",
+   "first_year": 2023,
+   "last_year": 2024,
+   "top_terms": [
+    "news",
+    "post",
+    "interesting",
+    "guest",
+    "latest",
+    "breaking"
+   ],
+   "example": "Read latest breaking news, updates, and headlines. National Post offers information on latest national and international events &amp; more.    https://www.natio"
+  }
+ ],
+ "medoid_examples": {
+  "5": "Вау, прекрасно веб-сайт. Спасибо... \nпосмотрите также мою страничку \nhttps://www.spotrpage.com/%D1%81%D0%B0%D1%80%D0%B4%D0%B8%D0%BD%D0%B8%D1%8F/ почивка римини \n \n354555=556",
+  "4": "[url=http://buy-cloned-cards.co.in]http://buy-cloned-cards.co.in[/url] \n \n\nHackers Make Credit Cards Easy with Stolen Visa & Mastercards\n\n If you want to buy cloned bank cards or hacked credit cards, ",
+  "7": "Hey,\n\nEvery business owner needs ultra fast loading websites to convert random website visitors to lifetime happy customers.\n\nBut, finding a suitable hosting technology that gives ultra fast performan",
+  "9": "[url=https://www.xn--80aaevcekoocvln.xn--p1ai]кирпичный дом под ключ[/url] - каркасный дом под ключ, построить кирпичный дом",
+  "10": "Salut, ech wollt Äre Präis wëssen.\nMake $1000 from $1 in a few minutes. Launch the financial robot now. https://wek.187sued.de/gotodate/promo",
+  "13": "Hello, \n \nInterested in how your website is ranking? \nLearn its pros and cons with our Complimentary SEO Audit! \n \nIn just moments, you’ll get a in-depth analysis of your website’s SEO health and acti",
+  "11": "Micro skirts photos and premium high res pictures getty images\nhttp://festi.android.sexy-dancer-vs-et.tiktok-pornhub.com/?devyn-mckayla\n\n linda loveless porn movies home made porn college girls michel",
+  "3": "<a href=https://advup.blogspot.com/2023/10/strategii-marketplace.html>Продвижение товаров на маркетплейсах</a> - это процесс активного увеличения видимости и привлечения потенциальных покупателей к то"
+ }
+}

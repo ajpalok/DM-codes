@@ -1,0 +1,80 @@
+# Apache .htaccess configuration
+# Security hardening and URL rewriting
+
+# Prevent directory listing
+Options -Indexes
+
+# Disable server signature
+ServerSignature Off
+
+# Protect sensitive files
+<FilesMatch "^(config\.php|db\.php|\.env|\.git)">
+    Require all denied
+</FilesMatch>
+
+# Protect log directory
+<DirectoryMatch "logs">
+    Require all denied
+</DirectoryMatch>
+
+# Enable HTTPS redirect (uncomment for production)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # HSTS (uncomment for production with HTTPS)
+    # Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# PHP security settings
+<IfModule mod_php.c>
+    php_flag display_errors Off
+    php_flag log_errors On
+    php_value error_log logs/php_errors.log
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+</IfModule>
+
+# Compression (optional, improves performance)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>
+
+# Cache control for static assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+</IfModule>
+
+# Block common attack vectors
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Block SQL injection attempts in URL
+    RewriteCond %{QUERY_STRING} (union.*select|insert.*into|drop.*table) [NC]
+    RewriteRule .* - [F,L]
+    
+    # Block XSS attempts in URL
+    RewriteCond %{QUERY_STRING} (<script|javascript:|onerror=) [NC]
+    RewriteRule .* - [F,L]
+    
+    # Block file injection attempts
+    RewriteCond %{QUERY_STRING} (\.\./|\.\.\\) [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# Limit request body size to prevent DoS
+LimitRequestBody 10240000
+
+# Set default charset
+AddDefaultCharset UTF-8

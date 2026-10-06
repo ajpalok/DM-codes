@@ -1,0 +1,52 @@
+{
+ "model": "Logistic regression",
+ "trained_on_rows": 7639,
+ "default_threshold": 0.5,
+ "cv": {
+  "accuracy": 0.9704145623112079,
+  "precision": 0.9962500303014693,
+  "recall": 0.9311307692307693,
+  "specificity": 0.9975653916639716,
+  "f1": 0.9625601370824353,
+  "balanced_acc": 0.9643480804473704,
+  "auc": 0.9963787570520422
+ },
+ "same_source_auc": 0.9122383252818035,
+ "genuine_messages_flagged_of_40": 1,
+ "thresholds": [
+  {
+   "threshold": 0.3,
+   "precision": 0.9516954574536148,
+   "recall": 0.952914798206278,
+   "specificity": 0.9665707327872481,
+   "SMS spam caught": 0.6296296296296297,
+   "contact-form legitimate flagged (of 40)": 11
+  },
+  {
+   "threshold": 0.5,
+   "precision": 0.9962302947224126,
+   "recall": 0.9311338885329917,
+   "specificity": 0.9975647553686074,
+   "SMS spam caught": 0.21739130434782608,
+   "contact-form legitimate flagged (of 40)": 1
+  },
+  {
+   "threshold": 0.7,
+   "precision": 0.9996335654085746,
+   "recall": 0.8737988468930173,
+   "specificity": 0.9997786141244188,
+   "SMS spam caught": 0.04186795491143317,
+   "contact-form legitimate flagged (of 40)": 0
+  },
+  {
+   "threshold": 0.9,
+   "precision": 1.0,
+   "recall": 0.5528507367072389,
+   "specificity": 1.0,
+   "SMS spam caught": 0.00966183574879227,
+   "contact-form legitimate flagged (of 40)": 0
+  }
+ ],
+ "sklearn_version": "1.8.0",
+ "limits": "Legitimate class is public SMS, not real contact-form traffic. Re-train on the operator's own data."
+}

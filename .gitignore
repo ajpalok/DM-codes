@@ -1,0 +1,42 @@
+# Personal data. The raw export holds names, e-mail addresses and phone numbers; OLD/ contains a copy of it.
+data/raw/
+OLD/
+
+# Course material and private planning notes
+Course Content/
+PLAN.md
+PRE-PLAN.md
+.claude/
+
+# Rebuilt by the tools/ scripts
+release/
+notebooks/formtrap_dm.py
+data/external/*.zip
+formtrap_data/
+
+# Runtime output
+software/logs/*.json
+software/logs/*.log
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# LaTeX build files (the PDF itself is kept)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.synctex.gz
+paper/*.fls
+paper/*.fdb_latexmk
+
+# Editors and OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+*/node_modules/
+
+Course_Content/

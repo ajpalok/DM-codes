@@ -1,0 +1,41 @@
+text,label,source
+"Hello, I saw your portfolio and I would like to ask whether you are available for a small freelance project next month. Please let me know your rates.",0,synthetic_holdout
+"Hi, I am a student at UIU and I am interested in the web development workshop you mentioned. Is registration still open?",0,synthetic_holdout
+"Good morning. I tried to log in to my account today but the page keeps showing an error. Could you please help me reset my password?",0,synthetic_holdout
+"I placed an order three days ago and have not received a confirmation yet. Can you check the status for me? Thanks.",0,synthetic_holdout
+"Assalamu alaikum, I would like to know the admission requirements and the last date to apply for the spring semester.",0,synthetic_holdout
+"Hi there, do you have this item in a larger size? I could not find it on the product page.",0,synthetic_holdout
+"We are organising a programming contest at our university and would like to invite you as a judge. Would you be available on the 20th?",0,synthetic_holdout
+"Hello, I found a broken image on your about page. Just wanted to let you know so it can be fixed.",0,synthetic_holdout
+"Can I change the delivery address for my order? I entered the wrong house number by mistake.",0,synthetic_holdout
+"I attended your talk last week and really liked it. Could you share the slides with me?",0,synthetic_holdout
+"Hi, what are your office hours during Ramadan? I would like to visit in person to collect my certificate.",0,synthetic_holdout
+"My name is Tanvir and I am writing to ask about internship opportunities for final year computer science students.",0,synthetic_holdout
+"The contact number listed on your page seems to be switched off. Is there another way to reach the support team?",0,synthetic_holdout
+"Hello, I would like a quotation for designing a five page company profile. We need it within two weeks.",0,synthetic_holdout
+"Thank you for the quick delivery. The package arrived in good condition and I am happy with the product.",0,synthetic_holdout
+"I think I was charged twice for the same booking. Could you look into it and refund the extra amount?",0,synthetic_holdout
+"Hi, is the venue wheelchair accessible? My father will be joining me for the event.",0,synthetic_holdout
+"I am a teacher and I want to use some of your articles in my class. Do I need permission for that?",0,synthetic_holdout
+"Could you tell me whether the course includes a certificate at the end and how long the classes run each week?",0,synthetic_holdout
+"Hello, I forgot to attach my transcript in the application form. How can I send it to you now?",0,synthetic_holdout
+"Do you deliver outside Dhaka? I live in Sylhet and want to order two books.",0,synthetic_holdout
+"I need to cancel my appointment on Thursday because of an exam. Is it possible to move it to next week?",0,synthetic_holdout
+"Hi, I am interested in the junior developer position posted on your page. Where should I send my CV?",0,synthetic_holdout
+"The download link in the confirmation message does not work for me. It shows page not found.",0,synthetic_holdout
+"Good evening, I would like to book a table for six people this Friday at eight. Please confirm if that is possible.",0,synthetic_holdout
+"Hello sir, I could not attend the lab class yesterday because I was sick. Can I submit the report tomorrow?",0,synthetic_holdout
+"I have a question about the data used in your recent blog post. Where did the figures for 2023 come from?",0,synthetic_holdout
+"Please remove my old phone number from my profile. I do not use it any more.",0,synthetic_holdout
+"We bought your software licence last year and want to renew it for another year. What is the process?",0,synthetic_holdout
+"Hi, the form on the registration page does not accept my student ID. It says the format is invalid.",0,synthetic_holdout
+"Can you recommend which laptop model is better for programming among the two listed in your shop?",0,synthetic_holdout
+"I would like to volunteer for the blood donation camp. Please tell me the time and place.",0,synthetic_holdout
+"Hello, I lost my library card. What should I do to get a replacement and is there any fee?",0,synthetic_holdout
+"My project group wants to interview someone from your team for a course assignment. Would a short online meeting be possible?",0,synthetic_holdout
+"Thanks for your reply. I will bring the documents on Sunday morning as you suggested.",0,synthetic_holdout
+"Is there parking near your office? I am coming by car for the meeting tomorrow.",0,synthetic_holdout
+"I received the wrong colour. I ordered blue but the box had a black one. How do I exchange it?",0,synthetic_holdout
+"Hi, could you please update me on my complaint? I submitted it last week and have not heard back.",0,synthetic_holdout
+"I am planning a study tour for forty students and want to know about group discounts for the museum visit.",0,synthetic_holdout
+"Hello, I enjoyed reading your tutorial on decision trees. One question, why did you use gain ratio instead of information gain?",0,synthetic_holdout

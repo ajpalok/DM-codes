@@ -1,0 +1,93 @@
+{
+ "min_support": 0.1,
+ "min_confidence": 0.8,
+ "honeypot_filled": [
+  {
+   "antecedent": "len=medium, topic=money",
+   "consequent": "honeypot=filled",
+   "support": 0.33861475780896333,
+   "confidence": 0.9614395886889461,
+   "lift": 1.3501716792205225
+  },
+  {
+   "antecedent": "url=one, len=medium, script=latin, phone=ru_format",
+   "consequent": "honeypot=filled",
+   "support": 0.40153915799004075,
+   "confidence": 0.9376321353065539,
+   "lift": 1.3167383260598713
+  },
+  {
+   "antecedent": "url=one, len=medium, email=free, phone=ru_format",
+   "consequent": "honeypot=filled",
+   "support": 0.27206880941602535,
+   "confidence": 0.9375975039001561,
+   "lift": 1.3166896923810838
+  },
+  {
+   "antecedent": "len=medium, script=latin, email=free, phone=ru_format",
+   "consequent": "honeypot=filled",
+   "support": 0.2761430511543685,
+   "confidence": 0.9355828220858895,
+   "lift": 1.31386042847281
+  },
+  {
+   "antecedent": "url=one, topic=money",
+   "consequent": "honeypot=filled",
+   "support": 0.3535536441828882,
+   "confidence": 0.9209905660377359,
+   "lift": 1.2933681884153583
+  },
+  {
+   "antecedent": "len=medium",
+   "consequent": "honeypot=filled",
+   "support": 0.5038478949751019,
+   "confidence": 0.915296052631579,
+   "lift": 1.2853712525512766
+  }
+ ],
+ "honeypot_empty": [
+  {
+   "antecedent": "url=none, len=short, email=free, phone=ru_format",
+   "consequent": "honeypot=empty",
+   "support": 0.1403349932095971,
+   "confidence": 0.878186968838527,
+   "lift": 3.0501808398809844
+  },
+  {
+   "antecedent": "len=short, name=joined",
+   "consequent": "honeypot=empty",
+   "support": 0.14259846084200997,
+   "confidence": 0.8774373259052926,
+   "lift": 3.047577127240238
+  },
+  {
+   "antecedent": "url=none, name=joined",
+   "consequent": "honeypot=empty",
+   "support": 0.14576731552738795,
+   "confidence": 0.8632707774798928,
+   "lift": 2.9983728733539046
+  },
+  {
+   "antecedent": "len=short, email=free",
+   "consequent": "honeypot=empty",
+   "support": 0.14124038026256225,
+   "confidence": 0.8571428571428571,
+   "lift": 2.977088948787062
+  },
+  {
+   "antecedent": "url=none, len=short, script=latin",
+   "consequent": "honeypot=empty",
+   "support": 0.10411951109099139,
+   "confidence": 0.8394160583941606,
+   "lift": 2.9155189826929258
+  },
+  {
+   "antecedent": "len=short, phone=ru_format",
+   "consequent": "honeypot=empty",
+   "support": 0.14440923494794025,
+   "confidence": 0.8328981723237598,
+   "lift": 2.8928806016716755
+  }
+ ],
+ "decision_tree_depth3": "|--- name_joined <= 0.50\n|   |--- name_len <= 2.25\n|   |   |--- cyrillic_ratio <= 0.19\n|   |   |   |--- class: 1\n|   |   |--- cyrillic_ratio >  0.19\n|   |   |   |--- class: 0\n|   |--- name_len >  2.25\n|   |   |--- phone_ru_format <= 0.50\n|   |   |   |--- class: 0\n|   |   |--- phone_ru_format >  0.50\n|   |   |   |--- class: 1\n|--- name_joined >  0.50\n|   |--- msg_len <= 3.88\n|   |   |--- email_local_len <= 2.25\n|   |   |   |--- class: 1\n|   |   |--- email_local_len >  2.25\n|   |   |   |--- class: 0\n|   |--- msg_len >  3.88\n|   |   |--- email_local_digits <= 0.35\n|   |   |   |--- class: 1\n|   |   |--- email_local_digits >  0.35\n|   |   |   |--- class: 0\n"
+}

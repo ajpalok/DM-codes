@@ -1,0 +1,35 @@
+# Logs
+logs/*.log
+logs/*.json
+
+# Database configuration (if using .env)
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Backup files
+*.bak
+*.swp
+*~
+
+# Temporary files
+tmp/
+temp/
+
+# Vendor dependencies (if using Composer)
+vendor/
+
+# Test data
+test_data/
+*.test.php
+
+# Production secrets
+config.production.php

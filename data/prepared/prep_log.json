@@ -1,0 +1,63 @@
+{
+  "steps": [
+    {
+      "step": "1 raw rows",
+      "rows": 5766
+    },
+    {
+      "step": "2 after dropping rows with no content",
+      "rows": 5650
+    },
+    {
+      "step": "3 after dropping exact duplicates",
+      "rows": 5439
+    }
+  ],
+  "raw_missing": {
+    "Timestamp": 2763,
+    "First name": 4907,
+    "Middle name": 4908,
+    "Last name": 4907,
+    "Full name": 1364,
+    "Email": 2712,
+    "Phone Number": 2720,
+    "Subject": 5711,
+    "Message": 527,
+    "URL-honeypot": 4193
+  },
+  "redundant_name_rows": 702,
+  "honeypot_window": {
+    "start": "2024-03-15 23:42:12",
+    "end": "2025-03-10 15:20:38",
+    "rows": 647,
+    "second_longest_run_rows": 98,
+    "second_longest_run_days": 3
+  },
+  "merged": {
+    "spam_unique_templates": 3122,
+    "ham_unique": 4517,
+    "sms_spam_check": 621
+  },
+  "pii_scan": {
+    "email_pattern": 0,
+    "phone_pattern": 0,
+    "raw_email_literal": 0,
+    "raw_phone_literal": 0,
+    "own_name_in_message": 0
+  },
+  "final": {
+    "rows": 5439,
+    "with_message": 5035,
+    "honeypot_known": 2856,
+    "honeypot_reliable": 2209,
+    "honeypot_filled": 1573,
+    "unique_templates": 3122,
+    "script": {
+      "latin": 3953,
+      "cyrillic": 790,
+      "none": 520,
+      "other": 176
+    },
+    "merged_rows": 7639
+  }
+}
