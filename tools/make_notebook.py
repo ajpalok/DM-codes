@@ -27,8 +27,20 @@ def cells(src):
             yield nbformat.v4.new_code_cell(body)
 
 
+def expand_includes(source):
+    """Replace each "# %include algorithms/<file>.py" line with that file's code (without its docstring).
+
+    The algorithms live in one place, algorithms/, and the notebook still runs on its own on Colab.
+    """
+    def include(match):
+        code = (ROOT / match.group(1)).read_text(encoding="utf-8")
+        code = re.sub(r'\A"""[\s\S]*?"""\n', "", code).strip("\n")
+        return f"# ---- {match.group(1)} ----\n{code}"
+    return re.sub(r"^# %include (\S+)$", include, source, flags=re.M)
+
+
 def main():
-    source = "\n\n".join(p.read_text(encoding="utf-8") for p in PARTS)
+    source = expand_includes("\n\n".join(p.read_text(encoding="utf-8") for p in PARTS))
     if "--script" in sys.argv:
         (ROOT / "notebooks" / "formtrap_dm.py").write_text(source, encoding="utf-8")
     nb = nbformat.v4.new_notebook(cells=list(cells(source)))

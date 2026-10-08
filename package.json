@@ -11,6 +11,7 @@
     "setup": "php software/setup_database.php",
     "import": "php software/cron/import_dataset.php",
     "test": "php software/test.php",
+    "algorithms": "python -m algorithms.selftest",
     "data": "python src/prepare_dataset.py",
     "notebook": "python tools/make_notebook.py && python tools/sync_artifacts.py",
     "check": "python tools/check_paper.py && python tools/check_py310.py",

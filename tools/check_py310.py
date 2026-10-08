@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 problems = []
 
-for path in sorted((ROOT / "notebooks" / "parts").glob("*.py")):
+for path in sorted((ROOT / "notebooks" / "parts").glob("*.py")) + sorted((ROOT / "algorithms").glob("*.py")):
     source = path.read_text(encoding="utf-8")
     quote_stack, depth = [], 0
     for tok in tokenize.generate_tokens(io.StringIO(source).readline):

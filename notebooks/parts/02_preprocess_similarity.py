@@ -162,8 +162,7 @@ print("no time feature and nothing derived from the honeypot field is included")
 from scipy.spatial.distance import cdist
 
 
-def minkowski(a, b, r):
-    return float((np.abs(a - b) ** r).sum() ** (1 / r))
+# %include algorithms/distance.py
 
 
 Z_all = StandardScaler().fit_transform(X_all)
@@ -188,12 +187,6 @@ for r, name in [(1, "Manhattan (r = 1)"), (2, "Euclidean (r = 2)"), (3, "Minkows
 # words and pharmacy words are not thereby similar. Jaccard is the right measure; SMC is shown for contrast.
 
 # %%
-def smc_jaccard(a, b):
-    f11 = int(((a == 1) & (b == 1)).sum())
-    f00 = int(((a == 0) & (b == 0)).sum())
-    f10 = int(((a == 1) & (b == 0)).sum())
-    f01 = int(((a == 0) & (b == 1)).sum())
-    return (f11 + f00) / (f11 + f00 + f10 + f01), (f11 / (f11 + f10 + f01) if f11 + f10 + f01 else 0.0), (f11, f00, f10, f01)
 
 
 B = X_all.loc[picks, BINARY_F].to_numpy()

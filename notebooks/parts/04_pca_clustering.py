@@ -38,14 +38,7 @@ assert np.allclose(sorted([lam1, lam2]), np.linalg.eigvalsh(cov))
 from sklearn.decomposition import PCA
 
 
-def pca_scratch(Z):
-    """Eigen-decomposition of the covariance matrix. Returns eigenvalues, eigenvectors (columns) and scores."""
-    Zc = Z - Z.mean(axis=0)
-    cov = Zc.T @ Zc / (len(Z) - 1)
-    values, vectors = np.linalg.eigh(cov)
-    order = np.argsort(values)[::-1]
-    values, vectors = values[order], vectors[:, order]
-    return values, vectors, Zc @ vectors
+# %include algorithms/pca.py
 
 
 eigvals, eigvecs, scores = pca_scratch(Z_all)
@@ -155,18 +148,7 @@ for msg in no_vocab["message"].head(4):
 # started from the same initial centroids.
 
 # %%
-def kmeans_scratch(X, centroids, max_iter=100):
-    history = []
-    for _ in range(max_iter):
-        d = ((X[:, None, :] - centroids[None, :, :]) ** 2).sum(axis=2)        # squared distance to every centroid
-        labels = d.argmin(axis=1)                                             # assignment step
-        history.append(float(d[np.arange(len(X)), labels].sum()))             # SSE
-        new = np.array([X[labels == j].mean(axis=0) if (labels == j).any() else centroids[j]
-                        for j in range(len(centroids))])                      # update step
-        if np.allclose(new, centroids):
-            break
-        centroids = new
-    return labels, centroids, history
+# %include algorithms/kmeans.py
 
 
 rng = np.random.default_rng(SEED)
@@ -263,20 +245,7 @@ savefig("fig_campaigns")
 # to the rest. Five random starts; the lowest-cost run is kept.
 
 # %%
-def kmedoids(D, k, rng, max_iter=50):
-    medoids = rng.choice(len(D), k, replace=False)
-    for _ in range(max_iter):
-        labels = D[:, medoids].argmin(axis=1)                                   # assignment step
-        new = medoids.copy()
-        for j in range(k):
-            members = np.where(labels == j)[0]
-            if len(members):
-                new[j] = members[D[np.ix_(members, members)].sum(axis=0).argmin()]   # best medoid of the cluster
-        if np.array_equal(new, medoids):
-            break
-        medoids = new
-    labels = D[:, medoids].argmin(axis=1)
-    return medoids, labels, float(D[np.arange(len(D)), medoids[labels]].sum())
+# %include algorithms/kmedoids.py
 
 
 rng = np.random.default_rng(SEED)
@@ -319,19 +288,7 @@ display(medoid_tbl.sort_values("cluster size", ascending=False).reset_index(drop
 x_len = np.log1p(df.loc[df["has_message"] == 1, "msg_len"].to_numpy(dtype=float))
 
 
-def em_two_gaussians(x, mu, sigma, weight, max_iter=2000, tol=1e-6):
-    log_lik = []
-    for _ in range(max_iter):
-        dens = weight * np.exp(-0.5 * ((x[:, None] - mu) / sigma) ** 2) / (sigma * np.sqrt(2 * np.pi))
-        log_lik.append(float(np.log(dens.sum(axis=1)).sum()))
-        resp = dens / dens.sum(axis=1, keepdims=True)                 # E-step: P(group | x)
-        nk = resp.sum(axis=0)                                         # M-step: weighted re-estimates
-        mu = (resp * x[:, None]).sum(axis=0) / nk
-        sigma = np.sqrt((resp * (x[:, None] - mu) ** 2).sum(axis=0) / nk)
-        weight = nk / len(x)
-        if len(log_lik) > 1 and abs(log_lik[-1] - log_lik[-2]) < tol:
-            break
-    return mu, sigma, weight, log_lik
+# %include algorithms/em.py
 
 
 mu0 = np.percentile(x_len, [25, 75])
