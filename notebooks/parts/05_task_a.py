@@ -57,21 +57,7 @@ print(f"class balance: {yA.mean():.1%} filled | train period 2020-2023: {past.su
 # specificity = TN / (TN + FP), F1 = 2 x precision x recall / (precision + recall).
 
 # %%
-def confusion_counts(y_true, y_pred):
-    tp = int(((y_true == 1) & (y_pred == 1)).sum())
-    fn = int(((y_true == 1) & (y_pred == 0)).sum())
-    fp = int(((y_true == 0) & (y_pred == 1)).sum())
-    tn = int(((y_true == 0) & (y_pred == 0)).sum())
-    return tp, fn, fp, tn
-
-
-def metrics_from_counts(tp, fn, fp, tn):
-    precision = tp / (tp + fp) if tp + fp else 0.0
-    recall = tp / (tp + fn) if tp + fn else 0.0
-    specificity = tn / (tn + fp) if tn + fp else 0.0
-    f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0.0
-    return {"accuracy": (tp + tn) / (tp + fn + fp + tn), "precision": precision, "recall": recall,
-            "specificity": specificity, "f1": f1, "balanced_acc": (recall + specificity) / 2}
+# %include algorithms/evaluation.py
 
 
 def scores_of(model, X):
@@ -139,20 +125,7 @@ print("confusion_counts matches sklearn.metrics.confusion_matrix")
 # the discretized attributes. Two attributes with many values are included on purpose to show the bias.
 
 # %%
-def entropy_of(labels):
-    _, counts = np.unique(labels, return_counts=True)
-    p = counts / counts.sum()
-    return float(-(p * np.log2(p)).sum())
-
-
-def split_measures(attribute, labels):
-    values, counts = np.unique(attribute, return_counts=True)
-    weights = counts / counts.sum()
-    after = sum(w * entropy_of(labels[attribute == v]) for v, w in zip(values, weights))
-    gain = entropy_of(labels) - after
-    split_info = float(-(weights * np.log2(weights)).sum())
-    return {"distinct values": len(values), "information gain": gain, "split information": split_info,
-            "gain ratio": gain / split_info if split_info else 0.0}
+# %include algorithms/decision_tree.py
 
 
 d_a = df.iloc[rows_a]
@@ -239,14 +212,7 @@ savefig("fig_tuning")
 # ## 8.4 KNN from scratch
 
 # %%
-def knn_predict(X_train, y_train, X_test, k):
-    preds, ties = [], []
-    for x in X_test:
-        dist = np.sqrt(((X_train - x) ** 2).sum(axis=1))          # Euclidean distance to every training row
-        nearest = np.argsort(dist, kind="stable")[:k + 1]         # the K nearest (and the next one, to detect ties)
-        preds.append(int(y_train[nearest[:k]].sum() * 2 > k))     # majority vote
-        ties.append(bool(np.isclose(dist[nearest[k - 1]], dist[nearest[k]], atol=1e-6)))
-    return np.array(preds), np.array(ties)
+# %include algorithms/knn.py
 
 
 scaler = StandardScaler().fit(XA[past])
@@ -281,25 +247,7 @@ print("KNN balanced accuracy (5-fold):", {k: round(v, 3) for k, v in knn_scaling
 # covariance matrix is singular (Section 6).
 
 # %%
-class MahalanobisClassifier(ClassifierMixin, BaseEstimator):
-    """Nearest class mean under the Mahalanobis distance, with one covariance matrix per class."""
-
-    def fit(self, X, y):
-        self.classes_ = np.unique(y)
-        self.means_ = [X[y == c].mean(axis=0) for c in self.classes_]                                # step 1
-        self.inv_covs_ = [np.linalg.pinv(np.cov(X[y == c], rowvar=False)) for c in self.classes_]    # steps 2-3
-        return self
-
-    def distances(self, X):
-        return np.column_stack([np.sqrt(np.clip(np.einsum("ij,jk,ik->i", X - m, s, X - m), 0, None))
-                                for m, s in zip(self.means_, self.inv_covs_)])                       # step 4
-
-    def decision_function(self, X):
-        d = self.distances(X)
-        return d[:, 0] - d[:, 1]            # positive when the point is closer to class 1
-
-    def predict(self, X):
-        return self.classes_[self.distances(X).argmin(axis=1)]                                       # step 5
+# %include algorithms/mahalanobis.py
 
 
 prep_pca = make_pipeline(StandardScaler(), PCA(0.90)).fit(XA[past])
@@ -416,20 +364,7 @@ display(lr_thresholds)
 # ones, and at what cost in size and time.
 
 # %%
-def perceptron_train(X, y, epochs=20, eta=1.0):
-    w, b = np.zeros(X.shape[1]), 0.0
-    errors = []
-    for _ in range(epochs):
-        wrong = 0
-        for x, target in zip(X, y):
-            output = int(w @ x + b > 0)                # forward pass with a step activation
-            delta = target - output                    # 0 if correct, +1 or -1 if wrong
-            if delta:
-                w += eta * delta * x                   # weight update
-                b += eta * delta                       # bias update
-                wrong += 1
-        errors.append(wrong)
-    return w, b, errors
+# %include algorithms/perceptron.py
 
 
 w_p, b_p, err_hist = perceptron_train(Ztr, yA[past])

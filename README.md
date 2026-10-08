@@ -10,10 +10,11 @@ Data mining on five years of spam received by one website contact form, and the 
 | `data/raw/` | The original export. **Contains names, e-mail addresses and phone numbers. Never publish it.** |
 | `data/external/` | SMS Spam Collection (UCI, CC BY 4.0), source of the legitimate messages |
 | `notebooks/FormTrap_DM.ipynb` | The analysis, executed, with outputs. Runs unchanged on Kaggle and Colab |
-| `notebooks/parts/` | The notebook's source, one cell-marked Python file per group of sections |
+| `notebooks/parts/` | The notebook's source, one cell-marked Python file per group of sections; algorithm code is pulled in from `algorithms/` |
+| `algorithms/` | One file per algorithm, written from scratch (Apriori, PCA, K-means, K-medoids, EM, KNN, Naive Bayes, ...), with a self-test. The notebook is built from these files |
 | `src/` | `prepare_dataset.py` (cleaning, anonymization, features) and `features.py` (shared with the software) |
 | `artifacts/` | What the notebook exports: models, metrics, campaign profiles, rules, figures |
-| `software/` | FormTrap: PHP + MySQL honeypot form, Python scoring service, mining dashboard. See `software/docs/DATA_MINING.md` |
+| `software/` | FormTrap: PHP + MySQL honeypot form, Python scoring service, and the analysis page (`mining.php`) that shows every method with its figures and results. See `software/docs/DATA_MINING.md` |
 | `paper/` | IEEE conference paper (`main.tex`, `main.pdf`, `IEEEtran.cls`, `figures/`) |
 | `release/` | The executed notebook, the dataset as a zip and as files, and Kaggle metadata |
 | `tools/` | Build scripts, and `dev.mjs`, which starts the whole system |
@@ -42,6 +43,7 @@ which also opens the browser.
 | `npm test` | The eight component tests of the software |
 | `npm run setup` | Only create the database, tables and rules |
 | `npm run import` | Load the dataset history into the database (the scoring service must be running) |
+| `npm run algorithms` | Check every from-scratch algorithm against a library |
 | `npm run data` | Rebuild the prepared dataset from the raw export |
 | `npm run notebook` | Execute the notebook and copy its exports to the software and the paper |
 | `npm run check` | Check the paper against the notebook's numbers, and the notebook source for Python 3.10 |
